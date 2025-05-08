@@ -19,8 +19,7 @@ jobs:
         java-package: jdk
         check-latest: false
         distribution: 
-         jdk+jre
+         jre
     - name: Run with Java
       run:
-       javac Trial.java
        java Trial
