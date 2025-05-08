@@ -18,6 +18,9 @@ jobs:
         java-version: 17
         java-package: jdk
         check-latest: false
+        distribution: 
+         jdk
+         jre
     - name: Run with Java
       run:
        javac Trial.java
