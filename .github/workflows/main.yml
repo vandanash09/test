@@ -1,0 +1,27 @@
+name: Test Github Deployment
+on:  [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout Repo
+       uses: actions/checkout@v3
+      -name: Setup Java
+       uses: actions/setup-java@v4
+       with:
+        java-version:'11.0.23'
+      -name: Run HelloWorld
+       run:
+         javac Trial.java
+         java Trial
+      -name: Push Repo
+       run:
+         git config user.name vandanash09
+         git config user.email vandanash09@github.com
+         git add .
+         git commit "Modidfied Project"
+         git push
+         
+         
+     
+    
