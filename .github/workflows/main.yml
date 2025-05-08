@@ -18,8 +18,7 @@ jobs:
         java-version: 17
         java-package: jdk
         check-latest: false
-        distribution: 
-         jre
+        distribution: adopt
     - name: Run with Java
       run:
        java Trial
